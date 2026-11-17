@@ -1,0 +1,80 @@
+<DOCTYPE html>
+    <body>
+        <head>
+            <title>Резюме Зеленька Артьома</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 24px;
+                    background-color: #4c4055;
+                }
+                h1 {
+                    color: #ffffff;
+                }
+                p {
+                    color: #ffffff;
+                }
+                h1 {
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+                a {
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+                p1 {
+                    text-shadow: 1px 1px 2px #e9deee;
+                    font-size: 20px;
+                }
+            </style>
+        <h1>Моє резюме на побачення</h1>
+        <p>Мене звати <p1>Зеленько Артьом Володимирович</p1></p>
+        <p>Я навчаюся в колледжі СТФK НУХТ, мені поки що 16 років але 27 листопада мені виповниться 17</p>
+        <p>У меня сім'я повна такой є старший брат Зеленьно Владислав Володимирович</p>
+        <p>Мого класного керівника звати: <p1>Сокол Ростислав Михайлович</p1></p>
+        <p>Він преподає "Вступ до фаху та комп'ютерну графіку", але як вчитель він класний, але чомусь мені він ставить 60% тобто 3 бали з 5</p>
+        <p>Мої батьки заробляють по 28000 гривень на місяць а старший брат коли як може і 50000 гривень а може й 30000</p>
+        <p>Мої хобі це: грати в комп'ютерні ігри, слухати музику, програмувати за бажанням</p>
+        <p>Мої цілі: вивчити програмування та стати професіоналом у цій галузі</p>
+        <p>Мої мрії: стати програмістом та заробляти гроші на цьому</p>
+        <p>В мене є котик його звати: <p1>Кажан</p1></p>
+        <p>Мої батьки працюють в ДСНС України</p>
+        <p>На цьому все</p>
+        <p><a href="https://www.stxt.com.ua">Сайт СТФK НУХТ </a></p> 
+    <label for="name">Введіть ваше ФІО:</label>
+    <input type="text" id="name" name="name">
+    <button type="button" id="confirm">Підтвердити</button>
+    <span id="name-check" aria-live="polite"></span>
+    <script>
+        const nameInput = document.getElementById("name");
+        const nameCheck = document.getElementById("name-check");
+        const confirmButton = document.getElementById("confirm");
+        const expectedName = "Сокол Ростислав Михайлович";
+
+        function checkNameMatch() {
+            const currentName = nameInput.value.trim();
+
+            if (currentName === expectedName) {
+                nameCheck.textContent = "✓";
+                nameCheck.style.color = "green";
+                confirmButton.disabled = false;
+                return true;
+            }
+
+            nameCheck.textContent = "ім'я не співпадає";
+            nameCheck.style.color = "white";
+            confirmButton.disabled = true;
+            return false;
+        }
+
+        nameInput.addEventListener("input", checkNameMatch);
+
+        confirmButton.addEventListener("click", () => {
+            if (checkNameMatch()) {
+                window.location.href = "https://www.youtube.com/watch?v=j-iheFkstFQ";
+            }
+        });
+        confirmButton.disabled = true;
+    </script>
+    </head>
+    </body>
