@@ -2,6 +2,72 @@
     <body>
         <head>
             <title>Резюме Зеленька Артьома</title>
-            
-        </head>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 24px;
+                    background-color: #201b1b;
+                }
+                h1 {
+                    color: #ffffff;
+                }
+                p {
+                    color: #ffffff;
+                }
+                h1 {
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+                a {
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+                p1 {
+                    text-shadow: 1px 1px 2px #9b20d4;
+                    font-size: 20px;
+                }
+            </style>
+        <h1>Resume</h1>
+            <p1>My name is Artem Zelenko</p1>
+        <p>Я навчаюся в колледжі СТФK НУХТ, мені поки що 16 років</p>
+        <p>I love my parents and my brothers</p>
+        <p>Мій класний керівник: <p1>Сокол Ростислав Михайлович</p1></p>
+        <p><a href="https://www.stxt.com.ua">Сайт СТФK НУХТ </a></p> 
+    <label for="name">Введіть ваше ФІО:</label>
+    <input type="text" id="name" name="name">
+    <button type="button" id="confirm">Підтвердити</button>
+    <span id="name-check" aria-live="polite"></span>
+    <script>
+        const nameInput = document.getElementById("name");
+        const nameCheck = document.getElementById("name-check");
+        const confirmButton = document.getElementById("confirm");
+        const expectedName = "Сокол Ростислав Михайлович";
+
+        function checkNameMatch() {
+            const currentName = nameInput.value.trim();
+
+            if (currentName === expectedName) {
+                nameCheck.textContent = "✓";
+                nameCheck.style.color = "green";
+                confirmButton.disabled = false;
+                return true;
+            }
+
+            nameCheck.textContent = "ФІО не співпадає";
+            nameCheck.style.color = "white";
+            confirmButton.disabled = true;
+            return false;
+        }
+
+        nameInput.addEventListener("input", checkNameMatch);
+
+        confirmButton.addEventListener("click", () => {
+            if (checkNameMatch()) {
+                window.location.href = "https://www.youtube.com/watch?v=j-iheFkstFQ";
+            }
+        });
+        confirmButton.disabled = true;
+    </script>
+    </head>
     </body>
+1
